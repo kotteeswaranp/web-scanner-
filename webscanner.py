@@ -105,7 +105,7 @@ def getUnicode(value, encoding=None, noneToNull=False):
         while True:
             try:
                 return unicode(value, encoding or "utf8")
-            except UnicodeDecodeError, ex:
+            except  (UnicodeDecodeError, ex):
                 try:
                     return unicode(value, "utf8")
                 except:
